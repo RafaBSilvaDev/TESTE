@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>Previsão de gasto com a Obra</h1>
+
+    Quantos meses a reforma da casa levará ? <input id="levara" type="text" placeholder="Meses"> <br> <br>
+
+<button onclick="semana()">Ver projeção semanal</button>
+<button onclick="mes()">Ver projeção mensal</button>
+<button onclick="total()">Ver projeção total</button> <br> <br>
+
+<b id="div_obra"></b>
+
+</body>
+</html>
+<script>
+
+    var preço = Number(380)
+    var semanal = Number(6 * preço)
+    var mensal = Number(semanal * 4)
+
+function semana() {
+    div_obra.innerHTML = "O valor semanal é de R$" + semanal
+
+}
+
+function mes() {
+    div_obra.innerHTML = "O valor mensal é de R$" + mensal
+}
+
+function total() {
+    var total = Number(mensal * levara.value)
+    div_obra.innerHTML = "O valor total é de R$" + total
+}
+
+
+
+
+
+</script>
